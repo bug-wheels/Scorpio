@@ -13,7 +13,7 @@
     <module>scorpio-core</module>
   </modules>
 
-  <name>Scorpio</name>
+  <name>scorpio</name>
   <url>https://github.com/bug-wheels/Scorpio</url>
   <description>A simple java tools</description>
 

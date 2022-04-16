@@ -10,19 +10,19 @@ public final class CollectionUtil {
   private CollectionUtil() {
   }
 
-  public static boolean isNotEmpty(Collection coll) {
+  public static boolean isNotEmpty(Collection<?> coll) {
     return !isEmpty(coll);
   }
 
-  public static boolean isNotEmpty(Map map) {
+  public static boolean isNotEmpty(Map<?, ?> map) {
     return !isEmpty(map);
   }
 
-  public static boolean isEmpty(Collection coll) {
+  public static boolean isEmpty(Collection<?> coll) {
     return coll == null || coll.isEmpty();
   }
 
-  public static boolean isEmpty(Map map) {
+  public static boolean isEmpty(Map<?, ?> map) {
     return map == null || map.isEmpty();
   }
 
@@ -44,6 +44,7 @@ public final class CollectionUtil {
     return (Collection<T>) iterable;
   }
 
+  @SafeVarargs
   public static <T> boolean contains(T param, T... params) {
     for (T t : params) {
       if (param == t || param.equals(t)) {
